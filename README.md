@@ -1,5 +1,7 @@
 # Blockchain Solution with Hyperledger Fabric + Hyperledger Explorer on Kubernetes
 
+mount local drive with minikube
+minikube start --mount-string="$HOME/go/src/github.com/nginx:/data"
 
 **Maintainers:** [feitnomore](https://github.com/feitnomore/)
 
