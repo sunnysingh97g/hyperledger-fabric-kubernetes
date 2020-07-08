@@ -53,7 +53,7 @@ Organizations:
 
 Orderer: &OrdererDefaults
 
-    OrdererType: solo
+    OrdererType: kafka
     Addresses:
         - blockchain-orderer:31010
 
@@ -62,6 +62,13 @@ Orderer: &OrdererDefaults
         MaxMessageCount: 50
         AbsoluteMaxBytes: 99 MB
         PreferredMaxBytes: 512 KB
+
+    Kafka:
+        Brokers:
+            - kafka1.local.parisi.biz:9092
+            - kafka2.local.parisi.biz:9092
+            - kafka3.local.parisi.biz:9092
+            - kafka4.local.parisi.biz:9092
 
     Organizations:
 

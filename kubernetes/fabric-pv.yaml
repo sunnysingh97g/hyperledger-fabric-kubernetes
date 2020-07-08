@@ -7,12 +7,10 @@ metadata:
     name: fabricfiles
 spec:
   capacity:
-    storage: 10Gi
+    storage: 1Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  nfs:
-    path: /nfs/fabric
-    server: storage.local.parisi.biz
-    readOnly: false
+  hostPath:
+    path: "/exports/fabric-data"

@@ -1,8 +1,11 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: blockchain-org2peer1
 spec:
+  selector:
+    matchLabels:
+      name: org2peer1
   replicas: 1
   template:
     metadata:
