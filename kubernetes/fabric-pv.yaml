@@ -13,4 +13,4 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/exports/fabric-data"
+    path: "/home/shishirsingh66/fabric-data"

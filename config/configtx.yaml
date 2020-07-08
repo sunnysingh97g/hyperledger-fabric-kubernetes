@@ -29,27 +29,6 @@ Organizations:
             - Host: blockchain-org2peer2
               Port: 30110
 
-    - &Org3
-        Name: Org3MSP
-        ID: Org3MSP
-        MSPDir: crypto-config/peerOrganizations/org3.example.com/msp
-        AdminPrincipal: Role.MEMBER
-        AnchorPeers:
-            - Host: blockchain-org3peer1
-              Port: 30110
-            - Host: blockchain-org3peer2
-              Port: 30110
-
-    - &Org4
-        Name: Org4MSP
-        ID: Org4MSP
-        MSPDir: crypto-config/peerOrganizations/org4.example.com/msp
-        AdminPrincipal: Role.MEMBER
-        AnchorPeers:
-            - Host: blockchain-org4peer1
-              Port: 30110
-            - Host: blockchain-org4peer2
-              Port: 30110
 
 Orderer: &OrdererDefaults
 
@@ -81,8 +60,7 @@ Profiles:
                 Organizations:
                     - *Org1
                     - *Org2
-                    - *Org3
-                    - *Org4
+
     FourOrgsChannel:
         Consortium: SampleConsortium
         Application:
@@ -90,6 +68,5 @@ Profiles:
             Organizations:
                 - *Org1
                 - *Org2
-                - *Org3
-                - *Org4
+
 
